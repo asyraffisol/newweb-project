@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // stop page refresh
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields before submitting.");
+            return;
+        }
+
+        alert(
+            "Thank you, " + name + "!\n\nYour message has been sent successfully."
+        );
+
+        // clear form after submit
+        form.reset();
+    });
+});
+</script>
+
+<!-- NAVIGATION BAR -->
+<div class="navbar">
+<a href="index.html">HOME 🏘️</a>
+  <a href="about.html">ABOUT ME 😄</a>
+  <a href="gallery.html">GALLERY 📸</a>
+  <a href="education.html">EDUCATION 🎓</a>
+  <a href="experience.html">WORK EXPERIENCE 🛠️</a>
+  <a href="contact.html">CONTACT 📞</a>
+</div>
+
+<div class="container">
+
+    <h1>Contact Me</h1>
+
+    <!-- CONTACT INFORMATION -->
+    <div class="section-box contact-info">
+        <h2>Contact Information</h2>
+        <p><b>📞 Phone:</b> 017-563 9458</p>
+        <p><b>📧 Email:</b> <a href="mailto:asyraf230504@gmail.com">asyraf230504gmail.com</a></p>
+        <p><b>📸 Instagram:</b> <a href="https://www.instagram.com/fx.rysa_?igsh=c3l6ZWdsZHZkMGR6" target="_blank">@fx.rysa</a></p>
+        <p><b>🎵 TikTok:</b> <a href="https://www.tiktok.com/@syrfffmd?_r=1&_t=ZS-92bPhJAeL1l" target="_blank">@syrfffmd</a></p>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="section-box">
+        <h2>Send Me a Message</h2>
+
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Muhammad Asyraf. All Rights Reserved.
+</div>
+
+</body>
+</html>
